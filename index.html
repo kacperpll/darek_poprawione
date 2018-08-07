@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ES6 Boilerplate</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+<style>
+    #beer {
+            animation: rotation 5s infinite linear;
+    }
+    @keyframes rotation {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(359deg);}
+    }   
+</style>
+<body>
+    <div style="width: 1200px; margin: auto;">
+        <img id="beer" height="50" src="./src/assets/beer-solid.png" alt="beer" style="display: inline-block;"/><h3 style="margin-left: 10px;margin-top:10px;display: inline-block;">Beers Management</h3>
+        <div class="row"> 
+            <div class="col-md-4" style="margin-top:40px;">
+                <h4 id="error" style="color: red;"></h4>
+                <form id="form-sell">
+                    <div class="form-group"> 
+                        <label for="name">Name of beer</label>
+                        <input class="form-control" type="text" id="name"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="img">Image Url</label>
+                        <input class="form-control" type="text" id="img" />
+                    </div>
+                    <div class="form-group">
+                        <label for="brewed">Brewed In</label>
+                        <input class="form-control" type="text" id="brewed"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="tagline">Tagline</label>
+                        <input class="form-control" type="numer" id="tagline"/>
+                    </div>
+                    <div class="form-group">
+                            <label for="attenuation">Attenuation</label>
+                            <input class="form-control" type="numer" id="attenuation"/>
+                        </div>
+                    <div class="form-group">
+                        <label for="percent">Percent</label>
+                        <input class="form-control " type="range" min="0" max="20" value="4" id="percent">
+                        </input>
+                        <p id="percentValue"></p>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-8" id="bookList">
+                <h3>Store Beers</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Image</th>
+                            <th scope="col">Name of beer</th>
+                            <th scope="col">Brewed</th>
+                            <th scope="col">Tagline</th>
+                            <th scope="col">Attenuation</th>
+                            <th scope="col">Percent</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table"></tbody>
+                </table>
+                <h3>User Beers</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Image</th>
+                            <th scope="col">Name of beer</th>
+                            <th scope="col">Brewed</th>
+                            <th scope="col">Tagline</th>
+                            <th scope="col">Attenuation</th>
+                            <th scope="col">Percent</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table2"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="dist/bundle.js"></script>
+</body>
+</html>
